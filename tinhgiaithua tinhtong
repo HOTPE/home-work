@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int TinhGiaiThua(int N)
+{
+    if (N == 0 || N == 1)
+    {
+        return 1;
+    }
+    return N * TinhGiaiThua(N - 1);
+}
+//Tinh tong day so tang tu 1 den N
+int TinhTong(int N)
+{
+    if (N == 0)
+    {
+        return 0;
+    }
+    return N + TinhTong(N - 1);
+}
+int main()
+{
+    int n;
+    cin >> n;
+    cout << TinhGiaiThua(n) << endl;
+    cout << TinhTong(n) << endl;
+}
+
